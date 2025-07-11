@@ -174,7 +174,6 @@
       .then(res =>res.json()) 
       .then(resposta =>{
 
-       cards.innerHTML = ''
        const origem  = resposta.original
        const final = resposta.atual
         listaLinks.push({original: origem, atual: final})
@@ -194,6 +193,7 @@
           button_link.textContent='Copy'
           button_link.classList.add('button_links')
           button_link.classList.add('button')
+          button_link.setAttributes('arial_label','Copy link to clipboard')
 
           let div_container = document.createElement('div')
           div_container.appendChild(p2)
