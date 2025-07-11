@@ -177,8 +177,7 @@
        const origem  = resposta.original
        const final = resposta.atual
         listaLinks.push({original: origem, atual: final})
-
-        listaLinks.forEach(element => {
+       const element = listaLinks[listaLinks.length - 1]
           let p1 = document.createElement('p')
           p1.textContent=element.original
           p1.classList.add('link1')
@@ -193,7 +192,7 @@
           button_link.textContent='Copy'
           button_link.classList.add('button_links')
           button_link.classList.add('button')
-          button_link.setAttribute('arial-label','Copy link to clipboard')
+          button_link.setAttribute('aria-label','Copy link to clipboard')
 
           let div_container = document.createElement('div')
           div_container.appendChild(p2)
