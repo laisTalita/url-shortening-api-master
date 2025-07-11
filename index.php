@@ -224,11 +224,8 @@
           divs.appendChild(hrs)
           divs.appendChild(div_container)
           cards.appendChild(divs)
-
-        });
-
         mostrarMensagem('var(--Cyan)','Link add!','ok')
-        console.log(listaLinks)
+      })
       .catch(erro =>{
         console.log(erro)
         mostrarMensagem('var(--Red)','Please, add a Link','erro')
