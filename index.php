@@ -165,6 +165,10 @@
     function enviaLink(event) {
       event.preventDefault()     
       const urlOriginal = input.value.trim();
+      if (!urlOriginal) {
+         mostrarMensagem('var(--Red)','Please, add a Link','erro')
+        return
+      }
 
       fetch('atividade.php',{
         method: 'POST',
@@ -177,7 +181,8 @@
        const origem  = resposta.original
        const final = resposta.atual
         listaLinks.push({original: origem, atual: final})
-       const element = listaLinks[listaLinks.length - 1]
+          const element = listaLinks[listaLinks.length - 1]
+
           let p1 = document.createElement('p')
           p1.textContent=element.original
           p1.classList.add('link1')
@@ -224,7 +229,7 @@
 
         mostrarMensagem('var(--Cyan)','Link add!','ok')
         console.log(listaLinks)
-      }).catch(erro =>{
+      .catch(erro =>{
         console.log(erro)
         mostrarMensagem('var(--Red)','Please, add a Link','erro')
       })
