@@ -18,7 +18,7 @@
   <header>
     <nav class=" navbar navbar-expand-md mt-4 p-4 ">            
         <a class="navbar-brand" href=""><img src="images/logo.svg" alt=""></a>
-        <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#menu">
+        <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#menu" aria-label="Toggle navigation menu">
             <span class="navbar-toggler-icon "></span>
         </button>
         <div class="collapse navbar-collapse mt-2  mt-md-0" id="menu">
@@ -35,7 +35,7 @@
                   <div class=" d-flex flex-column flex-md-row justify-content-center align-items-center pe-md-5">
                     <li class="nav-item" ><a  class="nav-link" href="">Login</a></li>
                     <li class="nav-item w-100 sing">
-                    <button class="m-auto button ">Sign Up</button>
+                    <button class="m-auto button ">Sign Up</button aria-label="Sign Up">
                       </li>
                   </div>
             </ul>
@@ -51,14 +51,14 @@
             Build your brand’s recognition and get detailed insights
             on how your links are performing.
           </p>
-          <button class="button_main button">Get Started</button>
+          <button class="button_main button" aria-label="Get Started">Get Started</button>
         </div>  
     </section>
     <section>
       <div id="div_sec_two">
         <form id="sec_two" onsubmit="enviaLink(event)" class="d-flex flex-wrap gap-3 " method="POST">
           <input type="url" name="url" id="url"  placeholder="Shorten a link here..." class="form-control ">
-          <button type="submit" class="button">Shorten It!</button>
+          <button type="submit" class="button" aria-label="Shorten It">Shorten It!</button>
           <p id="message" class="m-0 p-0"></p>
         </form>
       </div>
@@ -105,7 +105,7 @@
     </section>
     <section  class="sections pt-5 d-flex flex-column align-items-center justify-content-center gap-2" id="boots">
       <h2 class="text-light">Boost your links today</h2>
-      <button class=" button_main button">Get Started</button>
+      <button class=" button_main button" aria-label="Get Started">Get Started</button>
     </section>
   </main>
 <footer class="text-center text-lg-start pt-5 pb-4">
@@ -224,7 +224,7 @@
           divs.appendChild(hrs)
           divs.appendChild(div_container)
           cards.appendChild(divs)
-        mostrarMensagem('var(--Cyan)','Link add!','ok')
+          mostrarMensagem('var(--Cyan)','Link add!','ok')
       })
       .catch(erro =>{
         console.log(erro)
